@@ -3,7 +3,7 @@
   "name": "json-resume",
   "title": "JSON Resume",
   "description": "Parse JSON Resume",
-  "icon": "extension-icon.png",
+  "icon": "assets/extension-icon.png",
   "author": "almatkai",
   "platforms": [
     "macOS",
