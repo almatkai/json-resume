@@ -1,0 +1,32 @@
+[package]
+name = "json-resume-v2"
+version = "0.1.0"
+edition = "2021"
+rust-version = "1.85"
+license = "MIT"
+publish = false
+
+[dependencies]
+tezbar-extension-sdk = { git = "https://github.com/almatkai/tezbar-extension-sdk-rust.git", rev = "e955911f0bf5b558f9d3eb5183df0adc95c22af2", version = "=0.1.1" }
+serde = { version = "=1.0.219", features = ["derive"] }
+serde_json = "=1.0.140"
+ryu-js = "=1.0.2"
+tokio = { version = "=1.44.2", features = ["rt-multi-thread", "macros", "sync", "time", "net", "io-util"] }
+reqwest = { version = "=0.12.15", default-features = false, features = ["rustls-tls", "stream", "gzip", "brotli", "deflate"] }
+jsonschema = { version = "=0.29.1", default-features = false }
+url = "=2.5.4"
+chrono = { version = "=0.4.40", default-features = false, features = ["clock", "std"] }
+fs2 = "=0.4.3"
+# Already locked TLS crypto implementation; SHA-256 keys avoid retaining deleted URLs.
+ring = "=0.17.14"
+tempfile = "=3.19.1"
+uuid = { version = "=1.23.3", features = ["v4"] }
+# Bound URL's ICU transitive selection to its Rust 1.85-compatible generation.
+idna_adapter = "=1.2.0"
+time = "=0.3.41"
+
+[profile.release]
+lto = true
+codegen-units = 1
+strip = true
+panic = "abort"
