@@ -25,3 +25,4 @@ How this project works
 - `src/utils/` — helpers such as `validateResume.ts` and `storage.ts`.
 - `src/types/` — JSON Resume schema and TypeScript definitions.
 
+Standalone Rust V2: [implementation and verification](v2/README.md).

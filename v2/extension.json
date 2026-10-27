@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 3,
+  "id": "com.tezbar.native.json-resume",
+  "slug": "json-resume",
+  "name": "JSON Resume",
+  "version": "0.1.0",
+  "description": "Open, validate, view and save JSON Resume URLs.",
+  "author": "almatkai",
+  "icon": "resources/extension-icon.png",
+  "runtime": "rust",
+  "execution": "process",
+  "protocolVersion": 1,
+  "repository": "https://github.com/almatkai/json-resume",
+  "replaces": ["com.tezbar.json-resume", "raycast.json-resume"],
+  "platforms": ["macOS", "Windows"],
+  "commands": [
+    {"name": "open-resume", "title": "Open Resume", "runtime": "rust", "platforms": ["macOS", "Windows"], "timeoutMs": 30000, "refreshMs": null, "concurrency": "serialize"},
+    {"name": "search-resumes", "title": "View Saved Resumes", "runtime": "rust", "platforms": ["macOS", "Windows"], "timeoutMs": 30000, "refreshMs": null, "concurrency": "serialize"}
+  ],
+  "preferences": [],
+  "capabilities": ["clipboard.write", "shell.open", "storage"],
+  "artifacts": {},
+  "verification": [
+    {"platform": "macOS", "state": "not-run", "note": "Owned protocol and transport QA is separate from native GUI acceptance."},
+    {"platform": "Windows", "state": "not-run", "note": "Native Windows GUI/MSVC acceptance has not run."}
+  ]
+}

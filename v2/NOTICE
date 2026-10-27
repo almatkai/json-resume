@@ -1,0 +1,33 @@
+JSON Resume standalone Rust V2, 0.1.0
+Own source: https://github.com/almatkai/json-resume
+Source commit: 6cb8e33954fdc5da52af9993d92c6fa7b37e7c79 (MIT).
+The packaged LICENSE preserves the exact source grant wording, with literal
+backslash-n formatting converted to line breaks; V1 LICENSE remains unchanged.
+
+Original Raycast extension and icon:
+https://github.com/raycast/extensions/tree/6734d85992290066fd31a7f5bee3cca3d3545a1a/extensions/json-resume
+Icon SHA256: 038c492799df020c53b8bd0ffb6f84e664e8caae1de571496ba5591087b71d45
+No icon transformation. resources/licenses/raycast-extensions/LICENSE is the
+exact root grant from that upstream commit.
+
+SDK 0.1.1 (Apache-2.0):
+https://github.com/almatkai/tezbar-extension-sdk-rust
+e955911f0bf5b558f9d3eb5183df0adc95c22af2
+Authentic SDK LICENSE and NOTICE are in resources/licenses.
+
+Embedded JSON Resume schema: @jsonresume/schema 1.2.1 (MIT), exact npm lock input.
+Schema SHA256: 8911e912ee487954b10cb59da39265c7e62ef7cba5973706d125448adc853969
+URI/email compatibility code follows the semantics of jsonschema 1.5.0 (MIT).
+Their original grants are included. No JavaScript is executed at runtime.
+
+All Rust dependencies are pinned by Cargo.lock. dependency-notices.json records
+verified crates.io archive checksums, upstream-declared license/MSRV metadata,
+and verbatim notice files. r-efi AUTHORS includes its actual MIT grant and
+copyright attributions and is retained in full. The lock includes unused target
+packages; their metadata does not imply support for those targets.
+
+Evidence gaps: alloc-stdlib 0.3.0 (BSD-3-Clause), uuid-simd 0.8.0 (MIT), vsimd
+0.8.0 (MIT), winapi-i686-pc-windows-gnu 0.4.0 and winapi-x86_64-pc-windows-gnu
+0.4.0 (MIT/Apache-2.0) have no standalone grant file in the locked archives.
+No replacement grant wording or legal approval is asserted. See the reproducible
+archive audit and the recorded evidence gaps before publication.
